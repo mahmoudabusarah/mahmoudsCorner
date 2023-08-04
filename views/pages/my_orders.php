@@ -153,12 +153,23 @@ $User_ID = $_GET['id'];
                                 echo "0 results";
                             }
 
-                            mysqli_close($conn);
+                           
 ?>
                     
                     </div>
                     <div class="col-md-12">
                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="brand_color">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>your pending Tickets</h2>
                     </div>
                 </div>
             </div>
@@ -174,41 +185,29 @@ $User_ID = $_GET['id'];
             <div class="container">
                 <div class="row">
                 <?php
-                            $servername = "localhost";
-                            $username = "root";
-                            $password = "";
-                            $dbname = "techstore";
+                           
 
-                            // Create connection
-                            $conn = mysqli_connect($servername, $username, $password, $dbname);
-                            // Check connection
-                            if (!$conn) {
-                                die("Connection failed: " . mysqli_connect_error());
-                            }
+                            $sql2 = "SELECT * FROM `tickiting_report` WHERE `User_email` =  '$User_ID' and `ticket_status` ='pending'";
+                            $result2 = mysqli_query($conn, $sql2);
 
-                            $sql = "SELECT * FROM `order_table` WHERE `User_Email` = '$User_ID'";
-                            $result = mysqli_query($conn, $sql);
-
-                            if (mysqli_num_rows($result) > 0) {
+                            if (mysqli_num_rows($result2) > 0) {
                                 // output data of each row
-                                while($row = mysqli_fetch_assoc($result)) {
-                                    $productname =$row['Product_name'];
+                                while($row2 = mysqli_fetch_assoc($result2)) {
+                                    
                                   ?>
                                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
                                      <div class="brand_box">
-                                          <img src="image/<?php echo$row['product_Image'];?>" alt="img" />
-                                          <p><strong class="red"><?php echo $row['user_name'] .' '.$row['User_Email'].' '.$row['user_phone_number'];?></strong></p>
-                                          <p><?php echo $row['User_Adress'].' '.$row['User_City'] .$row['user_State'].' '.$row['user_zipcode']?></p>
-                                          <p><?php echo $row['product_type'].' '.$row['Product_name'] .'  color '.$row['product_color']."( total :". $row['order_total']." )" ?></p>
+                                          <img src="image/<?php echo$row2['damage_image'];?>" alt="img" />
+                                          <p><strong class="red"><?php echo $row2['User_name'] .' '.$row2['User_email'];?></strong></p>
+                                          <p><?php echo $row2['shipping_adress']?></p>
+                                          <p><?php echo $row2['Order_name'].' '.$row2['Order_Device_name'] ."( total :". $row2['Order_total']." )" ?></p>
                                    </div>
-                                   <form method="post" action="userticketformpage.php?id=<?php echo"$User_ID&productname=$productname";?>">
-                                   <input class="send" name="lgn" value="report a problem" type="submit">
-                                   </form>
+                                  
                                  </div>
                                 <?php
                                 }
                             } else {
-                                echo "0 results";
+                                echo "No tickets";
                             }
 
                             mysqli_close($conn);
@@ -222,52 +221,7 @@ $User_ID = $_GET['id'];
             </div>
         </div>
     </div>
-    <div class="about">
-        <div class="container">
-            <div class="row">
-            <?php 
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "techstore";
-            
-            // Create connection
-            $conn = new mysqli($servername, $username, $password, $dbname);
-            // Check connection
-            if ($conn->connect_error) {
-              die("Connection failed: " . $conn->connect_error);
-            }
-            
-            $sql = "SELECT * FROM `tickiting_report` WHERE `ticket_status` = 'pending' and 'User_email' = $User_ID";
-            $result = $conn->query($sql);
-            
-            if ($result->num_rows > 0) {
-              // output data of each row
-              while($row = $result->fetch_assoc()) {
-                $Order_ID = $row['Order_ID']
-                ?>
-                <div class="col-xl-5 col-lg-5 col-md-5 co-sm-l2">
-                    <div class="about_img">
-                        <figure><img src="tickting_image/<?php echo $row['damage_image']?>" alt="img" /></figure>
-                    </div>
-                </div>
-                <div class="col-xl-7 col-lg-7 col-md-7 co-sm-l2" style="text-align: left;">
-                    <div class="about_box">
-                        <h3>user tickets</h3>
-                        <p> ticket subject : <?php echo$row['ticket_subject'];?> (<?php echo $row['urgent_status'];?> )</p>
-                        <p>Customer name : <?php echo$row['User_name'];?> , customer Email : <?php echo$row['User_email']; ?>, customer adress : <?php echo$row['shipping_adress']?></p>
-                        <p>order Details : <?php echo $row['Order_ID'] .', '.$row['Order_name'] .' , '.$row['Order_Device_name'] .' , '.$row['Order_total'];?></p>
-                        <p>ticket in detail :<?php echo$row['User_problem'];?> </p>
-                        <?php
-                        
-              }}
-                        ?>
-
-           
-
-        </div>
-    </div>
-    </div>
+   
     <!-- footer -->
     <footer>
         <div id="contact" class="footer">
