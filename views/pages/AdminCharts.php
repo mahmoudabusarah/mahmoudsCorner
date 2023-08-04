@@ -597,6 +597,8 @@
                                                  while ($geoChartrow1 = $geoChartresult1->fetch_assoc()) {
                                                      $support_Name = $geoChartrow1['support_Name'];
 
+                                                    
+
                                              }
                                              
                                              $sqlNJ12 = "SELECT COUNT(`TID`) AS NumberOfProducts FROM  tickiting_report where `ticket_status` = 'solved'";
