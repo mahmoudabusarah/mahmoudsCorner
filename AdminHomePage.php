@@ -178,11 +178,18 @@
     <tbody>
         <tr>
         <?php
+            //Get Heroku ClearDB connection information
+            $cleardb_url = parse_url(getenv("mysql://b976babf6ca992:90e4708d@us-cdbr-east-06.cleardb.net/heroku_56df8df0a12e22b?reconnect=true"));
+            $servername = $cleardb_url["host"];
+            $username = $cleardb_url["user"];
+            $password = $cleardb_url["pass"];
+            $dbname = substr($cleardb_url["path"],1);
         
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "techstore";
+            // UNCOMMENT FOR LOCALHOST CONNECTION
+            // $servername = "localhost";
+            // $username = "root";
+            // $password = "";
+            // $dbname = "techstore";
 
             // Create connection
             $conn = mysqli_connect($servername, $username, $password, $dbname);
