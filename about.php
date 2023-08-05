@@ -14,21 +14,21 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
     <!-- style css -->
-    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="public/css/style.css">
     <!-- Responsive-->
-    <link rel="stylesheet" href="../../public/css/responsive.css">
+    <link rel="stylesheet" href="public/css/responsive.css">
     <!-- fevicon -->
-    <link rel="icon" href="../../public/images/fevicon.png" type="image/gif" />
+    <link rel="icon" href="public/images/fevicon.png" type="image/gif" />
     <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="../../public/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="public/css/jquery.mCustomScrollbar.min.css">
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <!-- owl stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../../public/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../../public/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="public/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="public/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -39,7 +39,7 @@
 <body class="main-layout">
     <!-- loader  -->
     <div class="loader_bg">
-        <div class="loader"><img src="../../public/images/loading.gif" alt="#" /></div>
+        <div class="loader"><img src="public/images/loading.gif" alt="#" /></div>
     </div>
     <!-- end loader -->
     <!-- header -->
@@ -53,7 +53,7 @@
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="index.html"><img src="../../public/images/logo.png" alt="#"></a>
+                                    <a href="index.html"><img src="public/images/logo.png" alt="#"></a>
                                 </div>
                             </div>
                         </div>
@@ -63,13 +63,13 @@
                             <div class="limit-box">
                                 <nav class="main-menu">
                                     <ul class="menu-area-main">
-                                        <li> <a href="index.html">Home</a> </li>
-                                        <li class="active"> <a href="about.html">About</a> </li>
-                                        <li><a href="brand.html">Brand</a></li>
-                                        <li><a href="cart.html">Cart</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
+                                        <li> <a href="index.php">Home</a> </li>
+                                        <li class="active"> <a href="about.php">About</a> </li>
+                                        <li><a href="brand.php">Brand</a></li>
+                                        <li><a href="cart.php">Cart</a></li>
+                                        <li><a href="contact.php">Contact Us</a></li>
                                         <li class="last">
-                                            <a href="#"><img src="../../public/images/search_icon.png" alt="icon" /></a>
+                                            <a href="#"><img src="public/images/search_icon.png" alt="icon" /></a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -79,9 +79,9 @@
                     <div class="col-md-6 offset-md-6">
                         <div class="location_icon_bottum">
                             <ul>
-                                <li><img src="../../public/icon/call.png" />(+71)9876543109</li>
-                                <li><img src="../../public/icon/email.png" />demo@gmail.com</li>
-                                <li><img src="../../public/icon/loc.png" />Location</li>
+                                <li><img src="public/icon/call.png" />(+71)9876543109</li>
+                                <li><img src="public/icon/email.png" />demo@gmail.com</li>
+                                <li><img src="public/icon/loc.png" />Location</li>
                             </ul>
                         </div>
                     </div>
@@ -109,7 +109,7 @@
             <div class="row">
                 <div class="col-xl-5 col-lg-5 col-md-5 co-sm-l2">
                     <div class="about_img">
-                        <figure><img src="../../public/images/about.png" alt="img" /></figure>
+                        <figure><img src="public/images/about.png" alt="img" /></figure>
                     </div>
                 </div>
                 <div class="col-xl-7 col-lg-7 col-md-7 co-sm-l2">
@@ -128,7 +128,7 @@
                 </div>
                 <div class="col-xl-5 col-lg-5 col-md-5 co-sm-l2">
                     <div class="about_img">
-                        <figure><img src="../../public/images/about.png" alt="img" /></figure>
+                        <figure><img src="public/images/about.png" alt="img" /></figure>
                     </div>
                 </div>
             </div>
@@ -158,11 +158,11 @@
                             </ul>
                             <div class="menu-bottom">
                                 <ul class="link">
-                                    <li> <a href="index.html">Home</a> </li>
-                                    <li class="active"> <a href="about.html">About</a> </li>
-                                    <li><a href="brand.html">Brand</a></li>
-                                    <li><a href="cart.html">Cart</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li> <a href="index.php">Home</a> </li>
+                                    <li class="active"> <a href="about.php">About</a> </li>
+                                    <li><a href="brand.php">Brand</a></li>
+                                    <li><a href="cart.php">Cart</a></li>
+                                    <li><a href="contact.php">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -178,16 +178,16 @@
     </footer>
     <!-- end footer -->
     <!-- Javascript files-->
-    <script src="../../public/js/jquery.min.js"></script>
-    <script src="../../public/js/popper.min.js"></script>
-    <script src="../../public/js/bootstrap.bundle.min.js"></script>
-    <script src="../../public/js/jquery-3.0.0.min.js"></script>
-    <script src="../../public/js/plugin.js"></script>
+    <script src="public/js/jquery.min.js"></script>
+    <script src="public/js/popper.min.js"></script>
+    <script src="public/js/bootstrap.bundle.min.js"></script>
+    <script src="public/js/jquery-3.0.0.min.js"></script>
+    <script src="public/js/plugin.js"></script>
     <!-- sidebar -->
-    <script src="../../public/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="../../public/js/custom.js"></script>
+    <script src="public/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="public/js/custom.js"></script>
     <!-- javascript -->
-    <script src="../../public/js/owl.carousel.js"></script>
+    <script src="public/js/owl.carousel.js"></script>
     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
     <script>
         $(document).ready(function() {

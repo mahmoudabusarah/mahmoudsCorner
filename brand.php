@@ -18,21 +18,21 @@ $ID = $_GET['id'];
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
     <!-- style css -->
-    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="public/css/style.css">
     <!-- Responsive-->
-    <link rel="stylesheet" href="../../public/css/responsive.css">
+    <link rel="stylesheet" href="public/css/responsive.css">
     <!-- fevicon -->
-    <link rel="icon" href="../../public/images/fevicon.png" type="image/gif" />
+    <link rel="icon" href="public/images/fevicon.png" type="image/gif" />
     <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="../../public/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="public/css/jquery.mCustomScrollbar.min.css">
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <!-- owl stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../../public/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../../public/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="public/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="public/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -43,7 +43,7 @@ $ID = $_GET['id'];
 <body class="main-layout">
     <!-- loader  -->
     <div class="loader_bg">
-        <div class="loader"><img src="../../public/images/loading.gif" alt="#" /></div>
+        <div class="loader"><img src="public/images/loading.gif" alt="#" /></div>
     </div>
     <!-- end loader -->
     <!-- header -->
@@ -57,7 +57,7 @@ $ID = $_GET['id'];
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="index.html"><img src="../../public/images/logo.png" alt="#"></a>
+                                    <a href="index.html"><img src="public/images/logo.png" alt="#"></a>
                                 </div>
                             </div>
                         </div>
@@ -68,12 +68,12 @@ $ID = $_GET['id'];
                                 <nav class="main-menu">
                                     <ul class="menu-area-main">
                                         <li class="active"> <a href="index.php">Home</a> </li>
-                                        <li> <a href="about.html">About</a> </li>
+                                        <li> <a href="about.php">About</a> </li>
                                         <li><a href="my_orders.php?id=<?php echo$ID ?>">Review my order</a></li>
                                         <li><a href="my_orders.php?id=<?php echo$ID ?>">Reporting a problem</a></li>
                                         <li><a href="index.php">log out</a></li>
                                         <li class="last">
-                                            <a href="#"><img src="../../public/images/search_icon.png" alt="icon" /></a>
+                                            <a href="#"><img src="public/images/search_icon.png" alt="icon" /></a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -83,9 +83,9 @@ $ID = $_GET['id'];
                     <div class="col-md-6 offset-md-6">
                         <div class="location_icon_bottum">
                             <ul>
-                                <li><img src="../../public/icon/call.png" />(+71)9876543109</li>
-                                <li><img src="../../public/icon/email.png" />demo@gmail.com</li>
-                                <li><img src="../../public/icon/loc.png" />Location</li>
+                                <li><img src="public/icon/call.png" />(+71)9876543109</li>
+                                <li><img src="public/icon/email.png" />demo@gmail.com</li>
+                                <li><img src="public/icon/loc.png" />Location</li>
                             </ul>
                         </div>
                     </div>
@@ -143,35 +143,35 @@ $ID = $_GET['id'];
                                           <p><?php echo $row['P_Type'].' '.$row['P_Name'] .$row['P_year'].'  color '.$row['P_color']?></p>
                                             <?php
                                                 if($row['P_Rating'] == 1){?>
-                                                 Rating : <i><img src="../../public/images/star.png"/></i>
+                                                 Rating : <i><img src="public/images/star.png"/></i>
                                             <?php
                                                } else if($row['P_Rating'] == 2){?>
 
-                            Rating :     <i><img src="../../public/images/star.png"/></i>
-                                         <i><img src="../../public/images/star.png"/></i>
+                            Rating :     <i><img src="public/images/star.png"/></i>
+                                         <i><img src="public/images/star.png"/></i>
                                     <?php }
                                      else if($row['P_Rating'] == 3){?>
 
-Rating :     <i><img src="../../public/images/star.png"/></i>
-                                        <i><img src="../../public/images/star.png"/></i>
-                                        <i><img src="../../public/images/star.png"/></i>
+Rating :     <i><img src="public/images/star.png"/></i>
+                                        <i><img src="public/images/star.png"/></i>
+                                        <i><img src="public/images/star.png"/></i>
 
 
                                    <?php }
                                     else if($row['P_Rating'] == 4){?>
 
-Rating :  <i><img src="../../public/images/star.png"/></i>
-                                        <i><img src="../../public/images/star.png"/></i>
-                                        <i><img src="../../public/images/star.png"/></i>
-                                        <i><img src="../../public/images/star.png"/></i>
+Rating :  <i><img src="public/images/star.png"/></i>
+                                        <i><img src="public/images/star.png"/></i>
+                                        <i><img src="public/images/star.png"/></i>
+                                        <i><img src="public/images/star.png"/></i>
                                    <?php }
                                     else if($row['P_Rating'] == 5){?>
 
-Rating : <i><img src="../../public/images/star.png"/></i>
-                                        <i><img src="../../public/images/star.png"/></i>
-                                        <i><img src="../../public/images/star.png"/></i>
-                                        <i><img src="../../public/images/star.png"/></i>
-                                        <i><img src="../../public/images/star.png"/></i>
+Rating : <i><img src="public/images/star.png"/></i>
+                                        <i><img src="public/images/star.png"/></i>
+                                        <i><img src="public/images/star.png"/></i>
+                                        <i><img src="public/images/star.png"/></i>
+                                        <i><img src="public/images/star.png"/></i>
                                    <?php }?>
                                    <form method="post" action="checkout.php?id=<?php echo"$ID&productname=$P_Name";?>">
                                    <input class="send" name="lgn" value="buyit" type="submit">
@@ -240,16 +240,16 @@ Rating : <i><img src="../../public/images/star.png"/></i>
     </footer>
     <!-- end footer -->
     <!-- Javascript files-->
-    <script src="../../public/js/jquery.min.js"></script>
-    <script src="../../public/js/popper.min.js"></script>
-    <script src="../../public/js/bootstrap.bundle.min.js"></script>
-    <script src="../../public/js/jquery-3.0.0.min.js"></script>
-    <script src="../../public/js/plugin.js"></script>
+    <script src="public/js/jquery.min.js"></script>
+    <script src="public/js/popper.min.js"></script>
+    <script src="public/js/bootstrap.bundle.min.js"></script>
+    <script src="public/js/jquery-3.0.0.min.js"></script>
+    <script src="public/js/plugin.js"></script>
     <!-- sidebar -->
-    <script src="../../public/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="../../public/js/custom.js"></script>
+    <script src="public/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="public/js/custom.js"></script>
     <!-- javascript -->
-    <script src="../../public/js/owl.carousel.js"></script>
+    <script src="public/js/owl.carousel.js"></script>
     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
     <script>
         $(document).ready(function() {
