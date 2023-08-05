@@ -1,11 +1,11 @@
 <?php
 $support_ID = $_GET['id'];
 //Get Heroku ClearDB connection information
-$cleardb_url = parse_url(getenv("mysql://b976babf6ca992:90e4708d@us-cdbr-east-06.cleardb.net/heroku_56df8df0a12e22b?reconnect=true"));
+$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 $servername = $cleardb_url["host"];
 $username = $cleardb_url["user"];
 $password = $cleardb_url["pass"];
-$dbname = substr($cleardb_url["path"],1);
+$dbname = ltrim($cleardb_url["path"], '/');
 $active_group = 'default';
 $query_builder = TRUE;
 // UNCOMMENT FOR LOCALHOST CONNECTION
@@ -198,10 +198,15 @@ if ($result2->num_rows > 0) {
         <div class="container">
             <div class="row">
             <?php 
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "techstore";
+            $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+            $servername = $cleardb_url["host"];
+            $username = $cleardb_url["user"];
+            $password = $cleardb_url["pass"];
+            $dbname = ltrim($cleardb_url["path"], '/');
+            // $servername = "localhost";
+            // $username = "root";
+            // $password = "";
+            // $dbname = "techstore";
             
             // Create connection
             $conn = new mysqli($servername, $username, $password, $dbname);

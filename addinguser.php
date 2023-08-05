@@ -16,11 +16,11 @@ if(isset($_POST['sgnup'])){
     $zipcode = $_POST['zipcode'];
 
     //Get Heroku ClearDB connection information
-    $cleardb_url = parse_url(getenv("mysql://b976babf6ca992:90e4708d@us-cdbr-east-06.cleardb.net/heroku_56df8df0a12e22b?reconnect=true"));
+    $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
     $servername = $cleardb_url["host"];
     $username = $cleardb_url["user"];
     $password = $cleardb_url["pass"];
-    $dbname = substr($cleardb_url["path"],1);
+    $dbname = ltrim($cleardb_url["path"], '/');
     $active_group = 'default';
     $query_builder = TRUE;
 
