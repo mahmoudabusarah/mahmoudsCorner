@@ -10,6 +10,8 @@
         $password = $cleardb_url["pass"];
         $dbname = substr($cleardb_url["path"],1);
 
+        $active_group = 'default';
+        $query_builder = TRUE;
         // UNCOMMENT FOR LOCALHOST CONNECTION
         // $servername = "localhost";
         // $username = "root";
